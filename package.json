@@ -1,12 +1,13 @@
 {
   "name": "awesocket",
-  "version": "0.0.0",
+  "version": "0.0.2",
   "description": "",
   "keywords": [],
   "homepage": "https://github.com/nswarr/awesocket",
   "bugs": {
     "url": "https://github.com/nswarr/awesocket/issues"
   },
+  "main": "lib/index",
   "license": "MIT",
   "author": "Nick Swarr <nswarr@glgoup.com>",
   "repository": {

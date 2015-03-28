@@ -2,15 +2,15 @@
 <script src="jspm_packages/system.js"></script>
 <script src="config.js"></script>
 <script>
-  System.import('lib/awesome-websocket').then(function(m){
+  System.import('lib/index').then(function(m){
 
-    var ws = new m.AwesomeWebSocket('ws://localhost:3000/echo')
+    var ws = new m.AwesomeWebSocket('ws://localhost:3000/echo');
 
     ws.onopen = function() {
       console.log("Connection opened!");
 
       setInterval(function() {
-        console.log("Saying hello")
+        console.log("Saying hello");
         ws.send("Hello!");
       }, 1000);
     };
