@@ -2,5 +2,21 @@
 <script src="jspm_packages/system.js"></script>
 <script src="config.js"></script>
 <script>
-  System.import('lib/awesome-websocket');
+  System.import('lib/awesome-websocket').then(function(m){
+
+    var ws = new m.AwesomeWebSocket('ws://localhost:3000/echo')
+
+    ws.onopen = function() {
+      console.log("Connection opened!");
+
+      setInterval(function() {
+        console.log("Saying hello")
+        ws.send("Hello!");
+      }, 1000);
+    };
+
+    ws.onmessage = function(m){
+      console.log("Response", m.data);
+    };
+  });
 </script>
